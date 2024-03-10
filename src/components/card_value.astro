@@ -1,0 +1,37 @@
+---
+interface Props {
+    title: string;
+    desc: string;
+    icon: string;
+}
+
+const {title, desc, icon} = Astro.props;
+---
+
+<div class="card_container">
+    <div class="card">
+        <img src={"images/" + icon} alt="icon">
+        <h5>{title}</h5>
+        <p>{desc}</p>
+        <a href="#">Read More <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+</div>
+
+<style>
+    .card {
+        background-color: white;
+        border-radius: 20px;
+        border: 1px solid #EAEAEA;
+        padding: 36px 23px;
+    }
+    h5 {
+        font-size: 20px;
+        margin: 15px 0;
+    }
+    .card > a {
+        text-decoration: none;
+        color: var(--color-primary-03);
+        display: inline-block;
+        margin-top: 30px;
+    }
+</style>

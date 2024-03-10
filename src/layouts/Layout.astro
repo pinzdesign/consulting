@@ -1,0 +1,124 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+	<script async defer src="https://kit.fontawesome.com/ed11d827ab.js" crossorigin="anonymous"></script>
+</html>
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+	:root {
+		/* Colors */
+		--color-bg: #fff;
+		--color-primary-01: #ffcc4a;
+		--color-primary-02: #4eaf4e;
+		--color-primary-03: #181818;
+		--color-secondary-01: #f5f5f5;
+		--color-p: #595566;
+
+		/* Text sizes  */
+		--fontsize-xxl: 3.125rem;
+		--fontsize-xl: 2.8125rem;
+		--fontsize-l: 2.5rem;
+		--fontsize-m: 2.1875rem;
+		--fontsize-s: 1.875rem;
+		--fontsize-xs: 1.6rem;
+		--fontsize-p: 1rem;
+
+		/* Elements */
+		--wrapper: 65vw;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	html {
+		font-size: 100%;
+	}
+
+	body {
+		font-family: Lato;
+		font-size: var(--fontsize-p);
+		color: var(--color-p);
+		font-style: normal;
+		font-weight: 400;
+		line-height: 147.5%;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: var(--color-primary-03);
+	}
+
+	h1 {
+		font-size: var(--fontsize-xxl);
+	}
+
+	h2 {
+		font-size: var(--fontsize-xl);
+		line-height: 116%;
+	}
+
+	h3 {
+		font-size: var(--fontsize-l);
+	}
+
+	h4 {
+		font-size: var(--fontsize-m);
+	}
+
+	h5 {
+		font-size: var(--fontsize-s);
+	}
+
+	h6 {
+		font-size: var(--fontsize-xs);
+	}
+
+	p {
+		font-size: var(--fontsize-p);
+	}
+
+	.wrapper {
+		width: var(--wrapper);
+		margin: 0 auto;
+	}
+
+	main {
+		--gap: 5vw;
+		--full: 1fr;
+		--content: var(--wrapper);
+		display: grid;
+		gap: var(--gap);
+		grid-template-columns:
+		[full-start] var(--full)
+      	[content-start] var(--content) [content-end]
+      	var(--full) [full-end];
+	}
+
+	main > * {
+		grid-column: full;
+	}
+
+	main > section:has(> div.wrapper) {
+		grid-column: content;
+	}
+</style>

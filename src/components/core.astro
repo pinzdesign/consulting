@@ -1,0 +1,56 @@
+---
+import Card from "./card_value.astro";
+---
+
+<section>
+    <div class="full">
+        <div class="wrapper">
+            <span class="services">Growing with our clients</span>
+            <div class="content_grid">
+                <div class="txt">
+                    <h2>Our core values & principles</h2>
+                    <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+                </div>
+                <div>
+                    <button class="btn_touch">Get in Touch</button>
+                </div>
+            </div>
+            <div class="values">
+                <Card title="Creative Ideas" icon="icon_value_ideas.svg" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam."></Card>
+                <Card title="Best Features" icon="icon_value_features.svg" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></Card>
+                <Card title="Experience" icon="icon_value_globe.svg" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam."></Card>
+                <Card title="Easy Solutions" icon="icon_value_gear.svg" desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></Card>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .full {
+        background-color: var(--color-secondary-01);
+        padding-top: 100px;
+    }
+    .values {
+        display: grid;
+        gap: 35px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .content_grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 400px;
+    }
+    .txt > p {
+        padding: 15px 0;
+    }
+    .btn_touch {
+        width: 167px;
+        padding: 15px 34px;
+        margin-bottom: 15px;
+        border-radius: 42px;
+        border: 0;
+        background-color: var(--color-primary-03);
+        color: white;
+    }
+</style>

@@ -1,0 +1,32 @@
+<div class="topbar">
+    <div class="wrapper">
+        <p>Monday - Friday8AM - 9PM</p>
+        <p>725 Park Ave, New York</p>
+        <p>some icons</p>
+    </div>
+</div>
+
+<style>
+    .topbar {
+        width: 100%;
+        background: var(--color-primary-03);
+        container-type: inline-size;
+    }
+    .topbar > .wrapper {
+        display: flex;
+        align-items: flex-start;
+        padding: 1.125rem;
+        justify-content: space-between;
+    }
+    .topbar > .wrapper > p {
+        color: var(--color-bg);
+        font-size: 0.875rem;
+        line-height: 160%; /* 1.4rem */
+
+    }
+    @container (max-width:800px) {
+        .topbar > .wrapper {
+            display: block;
+        }
+    }
+</style>

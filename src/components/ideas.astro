@@ -1,0 +1,84 @@
+<section>
+    <div class="wrapper">
+        <div class="about">
+            <span class="services">Our vision</span>
+            <h2>Turn your ideas into reality.</h2>
+            <p>
+                Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.
+            </p>
+            <div class="notes">
+                <p>
+                    <i class="fa-regular fa-circle-check"></i>
+                </p>
+                <p class="listnote">
+                    Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day.
+                </p>
+                <p>
+                    <i class="fa-regular fa-circle-check"></i>
+                </p>
+                <p class="listnote">
+                    Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital.
+                </p>
+            </div>
+        </div>
+        <div class="image">
+            <figure>
+                <img src="images/ideas.png" alt="ideas">
+            </figure>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        container-type: inline-size;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .image {
+        display: flex;
+        align-items: end;
+        justify-content: end;
+    }
+    figure {
+        position: relative;
+        width: 90%;
+    }
+    figure > img {
+        width: 90%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    figure::after {
+        content: url("images/pattern.svg");
+        position: absolute;
+        display: block;
+        width: 227px;
+        height: 227px;
+        right: -12px;
+        top: -45px;
+        z-index: -1;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+    .about > p {
+        margin-top: 30px;
+    }
+    .notes p:not([class="listnote"]) {
+        color: green;
+    }
+    .notes {
+        display: grid;
+        grid-template-columns: 30px auto;
+    }
+    @container (max-width:800px) {
+        .wrapper {
+            grid-template-columns: 1fr;
+            gap: 70px;
+        }
+    }
+</style>

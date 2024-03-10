@@ -1,0 +1,55 @@
+<figure>
+    <div class="wrapper">
+        <figcaption>
+            <span class="services">Services</span>
+            <p>Creative Services For Boost Your Business Growth</p>
+        </figcaption>
+    </div>
+</figure>
+
+<style>
+    figure {
+        background-image: url("images/photo.png");
+        background-size: cover;
+        background-position: center;
+        width: 100vw;
+        height: 80vh;
+        background-repeat: no-repeat;
+    }
+    figcaption {
+        display: inline-flex;
+        width: 50%;
+        padding: 3ch;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        border-radius: 29px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(5.5px);
+    }
+    figure > .wrapper {
+        height: inherit;
+        align-items: center;
+        display: flex;
+        container-type: inline-size;
+    }
+    figcaption > p {
+        color: var(--color-primary-03);
+        font-family: Cabin;
+        font-size: var(--fontsize-l);
+        font-weight: 700;
+        line-height: 116%;
+    }
+    .services {
+        color: var(--color-primary-03);
+        border-radius: 20px;
+        background-color: var(--color-primary-01);
+        padding: 0rem 0.9375rem;
+        text-transform: uppercase;
+    }
+    @container (max-width:800px) {
+        figcaption {
+            width: 100%;
+        }
+    }
+</style>

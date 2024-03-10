@@ -1,0 +1,44 @@
+<section>
+    <div class="wrapper">
+        <div class="counter_work">
+            <p>1128+</p>
+            <p>Successfull Work</p>
+        </div>
+        <div class="counter_team">
+            <p>908+</p>
+            <p>Team Member</p>
+        </div>
+        <div class="counter_cust">
+            <p>258+</p>
+            <p>Happy Customers</p>
+        </div>
+        <div class="counter_idea">
+            <p>564+</p>
+            <p>Creative Idea</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        container-type: inline-size;
+    }
+    .wrapper {
+        display: flex;
+        gap: 100px;
+        justify-content: center;
+    }
+    * > p {
+        font-size: var(--fontsize-xl);
+        color: var(--color-primary-03);
+    }
+    * > p + p {
+        font-size: 18px;
+        color: var(--color-primary-03);
+    }
+    @container (max-width:800px) {
+        .wrapper {
+            flex-wrap: wrap;
+        }
+    }
+</style>
