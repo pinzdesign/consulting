@@ -1,0 +1,69 @@
+<section>
+    <div class="wrapper">
+        <div class="content">
+            <span class="services">Our History</span>
+            <h2>Better Website Means A User Experience</h2>
+            <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+        </div>
+        <div class="video">
+            <figure>
+                <img src="../images/video_photo.png" alt="video image">
+                <figcaption>
+                    <img src="../images/play-button.svg" alt="play button">
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+<style>
+    .content {
+        text-align: center;
+        container-type: inline-size;
+    }
+    h2 {
+        width: 50%;
+        margin: 15px auto;
+    }
+    p {
+        width: 70%;
+        margin: 0px auto 30px auto;
+    }
+    figure {
+        position: relative;
+        width: 90%;
+        margin: 30px auto;
+    }
+    figure > img {
+        width: 100%;
+        border-radius: 28px;
+    }
+    figure::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        bottom: -30px;
+        width: 164px;
+        height: 183px;
+        border-radius: 20px;
+        background-color: var(--color-primary-02);
+        z-index: -1;
+    }
+    figure::after {
+        content: url("../images/pattern.svg");
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        z-index: -1;
+    }
+    figcaption {
+        position: absolute;
+        top: calc(50% - 54px);
+        left: calc(50% - 54px);
+    }
+    @container (max-width:800px) {
+        h2, p {
+            width: 100%;
+        }
+    }
+</style>

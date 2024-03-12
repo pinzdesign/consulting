@@ -1,0 +1,73 @@
+---
+import CardTeam from "./card_team.astro";
+---
+
+<section>
+    <div class="wrapper">
+        <div class="content">
+            <div class="cont_left">
+                <h2>Meet Our Great Team</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+            <div class="cont_right">
+                <button class="jointeam">Join our team</button>
+            </div>
+        </div>
+        <div class="team_list">
+            <!-- card import -->
+            <CardTeam name="Sarah Jasmine" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="CEO at Company" img="team_sarah.png"></CardTeam>
+            <CardTeam name="John Carter" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="Manager" img="team_john.png"></CardTeam>
+            <CardTeam name="Daisy Stella" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="CEO at Company" img="team_daisy.png"></CardTeam>
+            <CardTeam name="Maya Elizabeth" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="CEO at Company" img="team_maya.png"></CardTeam>
+            <CardTeam name="Ryan Jackson" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="CEO at Company" img="team_ryan.png"></CardTeam>
+            <CardTeam name="Lilly Victoria" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="CEO at Company" img="team_lilly.png"></CardTeam>
+        </div>
+    </div>
+</section>
+
+<style>
+    .wrapper {
+        container-type: inline-size;
+    }
+    .content {
+        margin-bottom: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 30px;
+    }
+    .cont_left {
+        width: 50%;
+    }
+    .team_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    p {
+        margin-top: 10px;
+    }
+    .jointeam {
+        padding: 15px 30px;
+        background-color: var(--color-primary-03);
+        color: white;
+        border-radius: 42px;
+        border: 0;
+    }
+    @container (max-width: 800px) {
+        .content {
+            flex-direction: column;
+        }
+        .cont_left {
+            width: auto;
+        }
+        .team_list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @container (max-width: 400px) {
+        .team_list {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

@@ -1,0 +1,64 @@
+---
+interface Props {
+    name: string;
+    desc: string;
+    label: string;
+    img: string;
+}
+
+const {name, desc, label, img} = Astro.props;
+---
+
+<div class="card">
+    <div class="image">
+        <img src={"../images/" + img} alt="team member">
+        <span class="team_label">{label}</span>
+    </div>
+    <div class="content">
+        <h5>{name}</h5>
+        <p>{desc}</p>
+        <div class="some">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </div>
+</div>
+
+<style>
+    h5 {
+        margin: 25px auto;
+    }
+    .image {
+        position: relative;
+    }
+    img {
+        border-radius: 20px;
+        width: 100%;
+    }
+    .content {
+        text-align: center;
+    }
+    .some {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin: 27px auto;
+        color: var(--color-primary-03);
+    }
+    .team_label {
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        z-index: 1;
+        background-color: var(--color-primary-03);
+        color: white;
+        padding: 4px 21px;
+        border-radius: 29px;
+        transition: all .5s;
+    }
+    .card:hover .team_label {
+        background-color: var(--color-primary-01);
+        color: var(--color-primary-03);
+    }
+</style>

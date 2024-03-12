@@ -26,14 +26,14 @@ import Card from "./card_value.astro";
 </section>
 
 <style>
-    .full {
-        background-color: var(--color-secondary-01);
-        padding-top: 100px;
+    .wrapper {
+        container-type: inline-size;
     }
     .values {
         display: grid;
         gap: 35px;
         grid-template-columns: repeat(4, 1fr);
+        container-type: inline-size;
     }
     .content_grid {
         display: flex;
@@ -52,5 +52,21 @@ import Card from "./card_value.astro";
         border: 0;
         background-color: var(--color-primary-03);
         color: white;
+    }
+    @container (max-width: 800px) {
+        .content_grid {
+            gap: 30px;
+        }
+        .values {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @container (max-width: 600px) {
+        .content_grid {
+            flex-direction: column;
+        }
+        .values {
+            grid-template-columns: 1fr;
+        }
     }
 </style>

@@ -1,24 +1,37 @@
+---
+interface Props {
+    title: string;
+    label: string;
+    img: string;
+}
+
+const {title, label, img} = Astro.props;
+---
+
 <figure>
+    <img src={"../images/" + img} alt="banner">
     <div class="wrapper">
         <figcaption>
-            <span class="services">Services</span>
-            <p>Creative Services For Boost Your Business Growth</p>
+            <span class="services">{label}</span>
+            <p>{title}</p>
         </figcaption>
     </div>
 </figure>
 
 <style>
     figure {
-        background-image: url("../images/photo.png");
-        background-size: cover;
-        background-position: center;
         width: 100vw;
-        height: 80vh;
         background-repeat: no-repeat;
+        position: relative;
+    }
+    figure > img {
+        width: 100%;
+        min-height: 300px;
+        object-fit: cover;
     }
     figcaption {
         display: inline-flex;
-        width: 50%;
+        maxwidth: 50%;
         padding: 3ch;
         flex-direction: column;
         align-items: flex-start;
@@ -28,10 +41,10 @@
         backdrop-filter: blur(5.5px);
     }
     figure > .wrapper {
-        height: inherit;
-        align-items: center;
-        display: flex;
         container-type: inline-size;
+        position: absolute;
+        top: 35%;
+        left: 17.5vw;
     }
     figcaption > p {
         color: var(--color-primary-03);
@@ -50,6 +63,17 @@
     @container (max-width:800px) {
         figcaption {
             width: 100%;
+        }
+        figcaption > p {
+            font-size: var(--fontsize-s);
+        }
+    }
+    @container (max-width:400px) {
+        figcaption {
+            width: auto;
+        }
+        figcaption > p {
+            font-size: var(--fontsize-xs);
         }
     }
 </style>

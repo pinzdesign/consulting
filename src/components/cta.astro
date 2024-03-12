@@ -1,0 +1,91 @@
+<section>
+    <div class="wrapper">
+        <div class="content">
+            <span class="services">Book Now</span>
+            <h3>Better Consult, <span class="h3_alt">Better</span> Results</h3>
+            <p>Our software development agency has a growth up to 30% per each year. If you are result-oriented, not afraid to take initiative - drop us a note and join our team!</p>
+            <a href="callus"><img src="../images/phone_vector.svg" alt="phone"> +800 1234 654 </a>
+        </div>
+        <div class="gfx">
+            <img class="pattern" src="../images/pattern.svg" alt="pattern">
+            <div class="dual_img">
+                <img src="../images/cta_gfx_02.png">
+                <img src="../images/cta_gfx_01.png">
+            </div>
+            <img class="img_long" src="../images/cta_gfx_03.png">
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--color-primary-03);
+        color: white;
+        border-radius: 30px;
+        container-type: inline-size;
+    }
+    h3 {
+        color: white;
+        margin: 20px 0;
+        line-height: 116%;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 73px;
+        padding: 90px;
+        overflow: hidden;
+        /* Overriding width */
+        width: calc(var(--wrapper) - 180px);
+    }
+    p {
+        margin: 20px 0;
+    }
+    .h3_alt {
+        color: #727272;
+    }
+    a {
+        background-color: var(--color-primary-01);
+        padding: 16px 21px;
+        border-radius: 42px;
+        color: var(--color-primary-03);
+        text-decoration: none;
+    }
+    .gfx {
+        position: relative;
+    }
+    .dual_img {
+        position: absolute;
+        bottom: -100px;
+        left: 50px;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .dual_img > img {
+        width: 100%;
+    }
+    .img_long {
+        position: absolute;
+        top: -100px;
+        right: -50px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        background-color: var(--color-primary-01);
+    }
+    .pattern {
+        transform: scaleX(-1);
+        z-index: -1;
+    }
+    @container (max-width:800px) {
+        .wrapper {
+            width: calc(var(--wrapper) - 60px);
+            grid-template-columns: 1fr;
+            padding: 30px;
+        }
+        .wrapper > .gfx {
+            display: none;
+        }
+    }
+</style>

@@ -1,0 +1,49 @@
+---
+import CardTeam from "./card_team.astro";
+---
+
+<section>
+    <div class="full">
+        <div class="wrapper">
+            <div class="content">
+                <span class="services">Our Team</span>
+                <h2>We champion the bold to achieve the extraordinary</h2>
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team.</p>
+            </div>
+            <div class="team_list">
+                <!-- card import -->
+                <CardTeam name="Sarah Jasmine" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="CEO at Company" img="team_sarah.png"></CardTeam>
+                <CardTeam name="John Carter" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="Manager" img="team_john.png"></CardTeam>
+                <CardTeam name="Daisy Stella" desc="Leverage agile frameworks to provide a robust synopsis for high level overviews." label="CEO at Company" img="team_daisy.png"></CardTeam>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .wrapper {
+        container-type: inline-size;
+    }
+    .content {
+        width: 50vw;
+        margin-bottom: 45px;
+    }
+    .team_list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+    }
+    p {
+        margin-top: 10px;
+    }
+    @container (max-width: 800px) {
+        .team_list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @container (max-width: 400px) {
+        .team_list {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

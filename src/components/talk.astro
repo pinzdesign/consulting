@@ -1,0 +1,72 @@
+<section>
+    <div class="wrapper">
+        <div class="content">
+            <span class="services">Contact</span>
+            <h3>Ready To Talk?</h3>
+            <p>Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque.
+                Massa placerat duis ultricies lacus sed turpis. Pellentesque  pellentesque habitant morbi tristique.
+            </p>
+            <input class="msgtxt" type="text" value="your mail address">
+            <button class="sendmsg">Send Message</button>
+        </div>
+        <div class="gfx">
+            <object data="../images/mask_img.svg"></object>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        background-color: var(--color-primary-03);
+        color: white;
+        border-radius: 30px;
+        container-type: inline-size;
+        overflow: hidden;
+    }
+    h3 {
+        color: white;
+        margin: 20px 0;
+        line-height: 116%;
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        margin: 0;
+    }
+    .content {
+        padding: 90px;
+        padding-right: 0px;
+    }
+    p {
+        margin: 20px 0;
+    }
+    .gfx {
+        /*background-image: url("../images/gfx_talk.png");*/
+        background-size: cover;
+    }
+    input[type="text"] {
+        padding: 16px;
+        border: 0;
+        font-size: var(--fontsize-p);
+        border-radius: 54px;
+        margin-right: 10px;
+    }
+    .sendmsg {
+        padding: 16px 27px;
+        border-radius: 42px;
+        border: 0;
+        background-color: var(--color-primary-02);
+        color: white;
+    }
+    @container (max-width:800px) {
+        .wrapper {
+            width: calc(var(--wrapper) - 60px);
+            grid-template-columns: 1fr;
+            padding: 30px;
+        }
+        .wrapper > .gfx {
+            display: none;
+        }
+    }
+</style>

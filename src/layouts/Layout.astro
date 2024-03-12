@@ -22,7 +22,7 @@ const { title } = Astro.props;
 	<script async defer src="https://kit.fontawesome.com/ed11d827ab.js" crossorigin="anonymous"></script>
 </html>
 <style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 	:root {
 		/* Colors */
@@ -50,6 +50,8 @@ const { title } = Astro.props;
 		margin: 0;
 		padding: 0;
 	}
+
+	/* Basic tags */
 
 	html {
 		font-size: 100%;
@@ -97,6 +99,8 @@ const { title } = Astro.props;
 		font-size: var(--fontsize-p);
 	}
 
+	/* Grid */
+
 	.wrapper {
 		width: var(--wrapper);
 		margin: 0 auto;
@@ -120,5 +124,14 @@ const { title } = Astro.props;
 
 	main > section:has(> div.wrapper) {
 		grid-column: content;
+	}
+
+	.full {
+        background-color: var(--color-secondary-01);
+        padding: 100px 0;
+    }
+	footer {
+		/* empty footer, need some height or it looks weird */
+		height: 100px;
 	}
 </style>
