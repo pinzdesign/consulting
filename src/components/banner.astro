@@ -23,6 +23,7 @@ const {title, label, img} = Astro.props;
         width: 100vw;
         background-repeat: no-repeat;
         position: relative;
+        container-type: inline-size;
     }
     figure > img {
         width: 100%;
@@ -31,7 +32,7 @@ const {title, label, img} = Astro.props;
     }
     figcaption {
         display: inline-flex;
-        maxwidth: 50%;
+        max-width: 50%;
         padding: 3ch;
         flex-direction: column;
         align-items: flex-start;
@@ -68,12 +69,15 @@ const {title, label, img} = Astro.props;
             font-size: var(--fontsize-s);
         }
     }
-    @container (max-width:400px) {
+    @container (max-width:600px) {
         figcaption {
-            width: auto;
+            max-width: calc(100% - 6ch);
         }
         figcaption > p {
             font-size: var(--fontsize-xs);
+        }
+        figure > .wrapper {
+            top: 15%;
         }
     }
 </style>

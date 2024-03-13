@@ -1,0 +1,81 @@
+<section>
+    <div class="wrapper">
+        <div class="case_img">
+            <img src="../images/caseintro.png" alt="case intro image">
+        </div>
+        <div class="case_content">
+            <div class="case_name">
+                <p>Case Name</p>
+                <p>Taxes & Efficiency</p>
+            </div>
+            <div class="case_cat">
+                <p>Category</p>
+                <p>Business</p>
+            </div>
+            <div class="case_date">
+                <p>Date</p>
+                <p>27 September 2022</p>
+            </div>
+            <div class="case_btn">
+                <button>
+                    Live Preview
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .wrapper {
+        position: relative;
+        container-type: inline-size;
+    }
+    .case_img > img {
+        width: 100%;
+        border-radius: 20px;
+    }
+    .case_content {
+        width: calc(90% - 120px);
+        background-color: var(--color-primary-03);
+        border-radius: 30px;
+        position: absolute;
+        bottom: -100px;
+        left: 5%;
+        padding: 53px 60px;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .case_btn {
+        text-align: right;
+    }
+    .case_btn button {
+        background-color: var(--color-primary-01);
+        border-radius: 42px;
+        padding: 16px 33px;
+        border: 0;
+        color: var(--color-primary-03);
+    }
+    p {
+        color: white;
+        font-size: 1.25rem; /* this fontsize is not included in style guide */
+    }
+    p + p {
+        font-size: var(--fontsize-p);
+    }
+    @container (max-width:800px) {
+        .case_content {
+            grid-template-columns: 1fr 1fr;
+            width: calc(100% - 120px);
+            position: static;
+        }
+        .case_btn {
+            text-align: left;
+        }
+    }
+    @container (max-width:400px) {
+        .case_content {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

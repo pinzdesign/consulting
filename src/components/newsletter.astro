@@ -1,0 +1,88 @@
+<section>
+    <div class="wrapper">
+        <div class="content">
+            <h4>Subscribe Our Newsletter</h4>
+            <p>Build stronger Customer Relationships with Consultalk</p>
+        </div>
+        <div class="ctrl">
+            <input type="text" value="your mail address">
+            <button>Subscribe</button>
+        </div>
+        <div class="gfx">
+            <div class="greenbox"></div>
+            <object data="../images/pattern.svg" class="gfx_pattern">
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        container-type: inline-size;
+    }
+    .wrapper {
+        background-color: var(--color-primary-03);
+        border-radius: 20px;
+        padding: 90px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: calc(var(--wrapper) - 180px);
+        position: relative;
+        overflow: hidden;
+    }
+    h4 {
+        color: white;
+    }
+    .content {
+        z-index: 1;
+    }
+    .ctrl {
+        text-align: right;
+        z-index: 1;
+        container-type: inline-size;
+    }
+    input[type="text"] {
+        padding: 22px 33px;
+        border-radius: 54px;
+        border: 0;
+        color: #a9a9a9;
+        margin-right: 15px;
+    }
+    button {
+        padding: 15px 45px;
+        border-radius: 42px;
+        background-color: var(--color-primary-01);
+        color: var(--color-primary-03);
+        border: 0;
+    }
+    p {
+        color: white;
+    }
+    .greenbox {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        transform: rotate(135deg);
+        border-radius: 20px;
+        background-color: var(--color-primary-02);
+        right: -75px;
+    }
+    .gfx_pattern {
+        position: absolute;
+        right: -75px;
+        top: -100px;
+        transform: rotate(135deg) scale(1.2);
+    }
+    @container (max-width: 800px) {
+        .wrapper {
+            width: calc(100% - 60px);
+            grid-template-columns: 1fr;
+            padding: 30px;
+        }
+        p {
+            padding: 12px 0;
+        }
+        .ctrl {
+            text-align: left;
+        }
+    }
+</style>
