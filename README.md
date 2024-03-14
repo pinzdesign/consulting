@@ -1,44 +1,38 @@
+# "Ask Experts" - Figma mockup til astro webside integrering!
 
+Formål med denne opgave var integrering af en Figma mockup til en webside lavet i Astro.
+Der er 4 sider:
+- About
+- Team
+- Case Study Single
+- Service Single
 
-[Project Overview Screenshot](public/images/screenshot_01.png);
+*Integrering inkluderer ikke en header(menu) eller footer, som vi blev bedt om at se bort fra, iflg opgavebeskrivelsen.*
 
-## 🚀 Project Structure
+For at kunne løse den, har jeg installeret en figma plugin til vscode, så jeg kan vise selve mockup, downloade assets, se design guide og meget mere:
+![Project Overview Screenshot 01](public/images/screenshot_01.png)
 
-Inside of your Astro project, you'll see the following folders and files:
+### Layout og style
+Min hoved (og eneste) Layout indeholder den overordnet layout beskrivelse (grid med navngivne lines), samt sætter nogle css værdier for farver og fonter for yderlige brug.
+Layout indeholder to typer af navngivne lines: Full, Wrapper. Websiden følger denne grid lodret.
+Alle afsnit er fordelt i sections som ligger i separate components, som har noget specifik styling som er unik til pågældende component. Grundet er at næsten alle afsnit på siden er ret forskellige, og der mangler konsistens gennem selve figma mockup-en, jeg har forsøgt at integrere design så tæt på figma filen som muligt. 
+Hver side består af flere components, og følger layout som er sat op i Layout.astro
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Components med properties
+Nogle components bruger astro props til at kunne lave nogle gentagende elementer hurtigt og nemt(som f.eks. cards).
+F.eks. en component til at lave en team-medlem card skal bruge et navn, kort beskrivelse, billede-navn og stilling. Bagefter kan jeg genbruge component til at lave flere team-medlemmer
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Ikoner
+Jeg har både downloaded ikoner som assets fra figma mockup, og brugt font-awesome.
+I tilfælde af slider på service single siden, for at skifte farver på svg, når der er hover over boksen har jeg brugt <use> inde i indlejret svg, hvor jeg kan sende en filnavn som componenten kræver. På den måde kan jeg få fat i <path> delen af svg'en og fortælle den hvilken farve den skal bruge. Jeg har også skiftet fill="currentColor" så farven på svg'en kan skiftes med css "color".
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Slider
+Slider på service single siden bruger en simpelt javascript som tilføjer nogle event listeners til kontrol-knapper (frem, tilbage). Event listeners ændrer margin af boksen som indeholder 4 cards.
+Ulempen her er at denne slider vil kun virke med 4 elementer.
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Accordion
+Accordion på service single siden er lavet ved hjælp af data-view html attribut. Denne data-view bestemmer hvilken tab skal vises, når en knap bliver klikket, og er afhæning af tab id.
+Javascripten udregner hvor stor boksen skal være, for at kunne animere height værdien.
 
-## 🧞 Commands
+![Project Overview Screenshot 02](public/images/screenshot_02.png)
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
