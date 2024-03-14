@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Topbar from "../components/topbar.astro";
+import Banner from "../components/banner.astro";
+import Ideas from "../components/ideas.astro";
+import Counter from "../components/counter.astro"
+import Core from "../components/core.astro";
+import History from "../components/history.astro";
+import Team from "../components/team.astro";
+import Cta from "../components/cta.astro";
+---
+
+<Layout title="Ask Experts">
+	<Topbar></Topbar>
+	<header></header>
+	<main>
+		<Banner title="Creative Services For Boost Your Business Growth" img="banner_about.png" label="services"></Banner>
+		<Ideas></Ideas>
+		<Counter></Counter>
+		<Core></Core>
+		<History></History>
+		<Team></Team>
+		<Cta></Cta>
+	</main>
+	<footer></footer>
+</Layout>

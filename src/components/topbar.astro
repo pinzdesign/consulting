@@ -1,8 +1,13 @@
 <div class="topbar">
     <div class="wrapper">
-        <p>Monday - Friday8AM - 9PM</p>
-        <p>725 Park Ave, New York</p>
-        <p>some icons</p>
+        <p><i class="fa-regular fa-clock"></i> Monday - Friday8AM - 9PM</p>
+        <p><i class="fa-solid fa-location-dot"></i> 725 Park Ave, New York</p>
+        <p class="some">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </p>
     </div>
 </div>
 
@@ -23,6 +28,13 @@
         font-size: 0.875rem;
         line-height: 160%; /* 1.4rem */
 
+    }
+    i {
+        color: var(--color-primary-01);
+    }
+    .some i {
+        padding-left: 25px;
+        color: white;
     }
     @container (max-width:800px) {
         .topbar > .wrapper {

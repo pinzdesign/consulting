@@ -1,0 +1,96 @@
+---
+import CardService from "./card_service.astro";
+---
+
+<section>
+    <div class="full">
+        <div class="wrapper">
+            <div class="content">
+                <div class="text">
+                    <object data="../images/financialpr.svg"></object>
+                    <h3>Financial Projections</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="controls">
+                    <button id="ctrl_left" class="ctrl_left"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="ctrl_right" class="ctrl_right"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+            <div id="slider" class="slider">
+                <CardService icon="service_file.svg" title="The Balance Sheet" text="The Balance Sheet is a summary of the assets and liabilities and equity of a business at a specific point of time."></CardService>
+                <CardService icon="service_file2.svg" title="Income Statement" text="The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)"></CardService>
+                <CardService icon="service_house.svg" title="Financial Plan" text="Keep your information current and review the documents on a regular basis (monthly or more often if needed). Review them with key individuals within your company."></CardService>
+                <CardService icon="service_money.svg" title="Financial Ratios" text="Ratios are useful when comparing your company with the competition on financial performance and also when benchmarking the performance of your company."></CardService>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .wrapper {
+        overflow: hidden;
+        container-type: inline-size;
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 400px;
+    }
+    .controls {
+        min-width: 100px;
+        text-align: right;
+    }
+    .slider {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 43px;
+        width: 135%;
+        transition: all .5s;
+    }
+    h3 {
+        margin: 30px 0;
+    }
+    button {
+        background-color: var(--color-primary-03);
+        color: white;
+        padding: 12px 14px;
+        border: 0;
+        border-radius: 50%;
+        transition: all .3s;
+    }
+    button:hover {
+        background-color: var(--color-primary-01);
+        color: var(--color-primary-03);
+    }
+    @container (max-width: 800px) {
+        .content {
+            gap: 30px;
+        }
+        .slider {
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            margin-left: 0 !important;
+        }
+    }
+    @container (max-width: 600px) {
+        .content {
+            flex-direction: column;
+        }
+        .slider {
+            width: 100%;
+            grid-template-columns: 1fr;
+            margin-left: 0 !important;
+        }
+    }
+</style>
+
+<script>
+    document.querySelector("#ctrl_left")!.addEventListener("click", function() {
+        document.querySelector<HTMLElement>("#slider")!.style.marginLeft = "0";
+    });
+    document.querySelector("#ctrl_right")!.addEventListener("click", function() {
+        document.querySelector<HTMLElement>("#slider")!.style.marginLeft = "-35%";
+    });
+</script>

@@ -1,0 +1,108 @@
+<section>
+    <div class="wrapper">
+        <div class="content">
+            <span class="services">FAQ</span>
+            <h3>Customer Questions</h3>
+        </div>
+        <div class="tabs">
+            <div class="panel">
+                <button data-view="tab_01">What will happen when I've sent my application? <i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="txt" id="tab_01">
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+            <div class="panel">
+                <button data-view="tab_02">Can I get a free trial before I purchase? <i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="txt" id="tab_02">
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+            <div class="panel">
+                <button data-view="tab_03">What should I include in my personal statement? <i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="txt" id="tab_03">
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+            <div class="panel">
+                <button data-view="tab_04">Will membership plans be charged automatically? <i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="txt" id="tab_04"><p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p></div>
+            <div class="panel">
+                <button data-view="tab_05">What will happen when I've sent my application? <i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="txt" id="tab_05">
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+            <div class="panel">
+                <button data-view="tab_06">Can I get a free trial before I purchase? <i class="fa-solid fa-minus"></i></button>
+            </div>
+            <div class="txt" id="tab_06">
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        container-type: inline-size;
+    }
+    .wrapper {
+        padding: 10vw;
+        background-color: var(--color-secondary-01);
+        width: calc(var(--wrapper) - 20vw);
+    }
+    .panel {
+        container-type: inline-size;
+    }
+    button {
+        width: 100%;
+        padding: 15px 0;
+        border: 0;
+        border-bottom: 2px solid lightgray;
+        cursor: pointer;
+        text-align: left;
+        font-size: 20px;
+        background-color: transparent;
+    }
+    .content {
+        text-align: center;
+    }
+    .txt {
+        height: 0;
+        overflow: hidden;
+        transition: all .3s;
+    }
+    .services {
+        background-color: var(--color-primary-02);
+        color: white;
+    }
+    .tabs p {
+        padding: 15px 0;
+    }
+    @container (max-width: 800px) {
+        .wrapper {
+            padding: 30px;
+            width: calc(var(--wrapper) - 60px);
+        }
+        button {
+            font-size: 16px;
+        }
+    }
+</style>
+
+<script>
+    document.querySelectorAll(".tabs button").forEach(function (item) {
+        item.addEventListener("click", function() {
+            let tab = document.querySelector("#" + item.dataset.view);
+            if (tab.style.height) {
+                tab.style.height = null;
+            } else {
+                tab.style.height = tab.scrollHeight + "px";
+            }
+        })
+    })
+</script>

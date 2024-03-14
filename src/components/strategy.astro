@@ -1,0 +1,82 @@
+<section>
+    <div class="full">
+        <div class="wrapper">
+            <div class="content">
+                <span class="services">Our History</span>
+                <h2>Better Website Means A User Experience</h2>
+                <p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+            </div>
+            <div class="video">
+                <figure>
+                    <img src="../images/video_photo2.png" alt="video image">
+                    <figcaption>
+                        <img src="../images/play-button.svg" alt="play button">
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .full {
+        background-color: var(--color-primary-03);
+    }
+    .content {
+        text-align: center;
+        container-type: inline-size;
+    }
+    h2 {
+        width: 50%;
+        margin: 15px auto;
+        color: white;
+    }
+    p {
+        width: 70%;
+        margin: 0px auto 30px auto;
+        color: white;
+    }
+    figure {
+        position: relative;
+        width: 90%;
+        margin: 30px auto;
+    }
+    figure > img {
+        width: 100%;
+        border-radius: 28px;
+        position: inherit;
+        z-index: 1;
+    }
+    figure::before {
+        content: "";
+        position: absolute;
+        right: -30px;
+        bottom: -30px;
+        width: 164px;
+        height: 183px;
+        border-radius: 20px;
+        background-color: var(--color-primary-01);
+    }
+    figure::after {
+        content: url("../images/pattern.svg");
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        transform: scaleX(-1);
+    }
+    figcaption {
+        position: absolute;
+        top: calc(50% - 54px);
+        left: calc(50% - 54px);
+        z-index: 2;
+    }
+    .services {
+        color: white;
+        background-color: var(--color-primary-02);
+    }
+    @container (max-width:800px) {
+        h2, p {
+            width: 100%;
+        }
+    }
+</style>
