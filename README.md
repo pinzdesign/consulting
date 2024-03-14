@@ -1,11 +1,12 @@
 # "Ask Experts" - Figma mockup til astro webside integrering!
 
-Formål med denne opgave var integrering af en Figma mockup til en webside lavet i Astro.
+Formål med denne opgave var integrering af en Figma mockup til en webside lavet i Astro. Siden skal deployes hos Netlify
 Der er 4 sider:
-- About
-- Team
-- Case Study Single
-- Service Single
+
+- About https://calm-peony-84fa0f.netlify.app/
+- Team https://calm-peony-84fa0f.netlify.app/teampage/
+- Case Study Single https://calm-peony-84fa0f.netlify.app/casestudypage/
+- Service Single https://calm-peony-84fa0f.netlify.app/servicepage/
 
 *Integrering inkluderer ikke en header(menu) eller footer, som vi blev bedt om at se bort fra, iflg opgavebeskrivelsen.*
 
@@ -24,7 +25,7 @@ F.eks. en component til at lave en team-medlem card skal bruge et navn, kort bes
 
 ### Ikoner
 Jeg har både downloaded ikoner som assets fra figma mockup, og brugt font-awesome.
-I tilfælde af slider på service single siden, for at skifte farver på svg, når der er hover over boksen har jeg brugt <use> inde i indlejret svg, hvor jeg kan sende en filnavn som componenten kræver. På den måde kan jeg få fat i <path> delen af svg'en og fortælle den hvilken farve den skal bruge. Jeg har også skiftet fill="currentColor" så farven på svg'en kan skiftes med css "color".
+I tilfælde af slider på service single siden, for at skifte farver på svg, når der er hover over boksen har jeg brugt "use" inde i inlinede svg, hvor jeg kan sende en filnavn som componenten kræver. På den måde kan jeg få fat i <path> delen af svg'en og fortælle den hvilken farve den skal bruge. Jeg har også skiftet fill="currentColor" på alle 4 svger, så farven kan skiftes med css "color".
 
 ### Slider
 Slider på service single siden bruger en simpelt javascript som tilføjer nogle event listeners til kontrol-knapper (frem, tilbage). Event listeners ændrer margin af boksen som indeholder 4 cards.
@@ -35,4 +36,7 @@ Accordion på service single siden er lavet ved hjælp af data-view html attribu
 Javascripten udregner hvor stor boksen skal være, for at kunne animere height værdien.
 
 ![Project Overview Screenshot 02](public/images/screenshot_02.png)
+
+## Konklusion
+I denne opgave har jeg brugt flere nye teknikker som blev introduceret i "Design for Developers": benyttet grid og flex til at definere layout, brugt container queries istedet for media queries, har brugt komplekse og præcise css selectorer som :has og psueduselectors som before og after, anvendt nesting i css, har prøvet at manipulere med svg og meget mere. Der var flere udfordringer, og nogne af dem blev ikke løst (grafikken i nogle af bokser) men i det hele så synes jeg at jeg har nået det meste af det
 
